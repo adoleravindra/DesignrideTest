@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+    <div class="container">
+  <a class="navbar-brand" href="#">Designride Test</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="container">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        {% for x in data %}
+          <a class="dropdown-item" href="#">{{ x.ProductName }}</a>
+       {% endfor %}
+        </div>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/user/">User</a>
+      </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+</nav>
+ <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12"></div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+            <br>
+                <center><h2>Product List</h2></center>
+
+              <table class="table" border="1">
+  <thead>
+    <tr>
+      <th scope="col">Product Name</th>
+      <th scope="col">Featured</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for x in data %}
+    <tr>
+      <th scope="row">{{ x.ProductName }}</th>
+        <td><center>
+
+            <input class="form-check-input" type="checkbox" value="" id="inlineCheckbox1">
+        </center></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+              </table>
+
+                 </div>
+            <div class="col-md-4 col-sm-3 col-xs-12"></div>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+</body>
+</html>
